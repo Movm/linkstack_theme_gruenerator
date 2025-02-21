@@ -1,4 +1,3 @@
-
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -14,6 +13,29 @@
 
 */
 
+:root {
+    /* Basisfarben */
+    --tanne: #005538;
+    --klee: #008939;
+    --grashalm: #8ABD24;
+    --sand: #F5F1E9;
+    --himmel: #0BA1DD;
+    --sonne: #FFF17A;
+    --weiß: #ffffff;
+    --dunkelgruen: #005437;
+    --dunkelgruen-alt: #004d40;
+    --backgroundgruen: #f3faf6;
+    --dunkelgrau: #333;
+    --anthrazit: #222;
+    
+    /* Light Mode (Standard) */
+    --background-color: var(--weiß);
+    --background-color-alt: var(--backgroundgruen);
+    --background-color-sand: var(--sand);
+    --font-color: var(--dunkelgrau);
+    --font-color-h: var(--tanne);
+    --link-color: var(--tanne);
+}
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -66,19 +88,19 @@
         font-size: 18px;
         line-height: 24px;
         font-weight: 400;
-        background: #292929;
-        background: radial-gradient(circle, #292929 28%, #1b1b1b 100%);
+        background: var(--anthrazit);
+        background: radial-gradient(circle, var(--anthrazit) 28%, var(--dunkelgruen-alt) 100%);
         font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #FFFFFF; }
+        color: var(--sand); }
     }
     @media (prefers-color-scheme: light) {
       body {
         font-size: 18px;
         line-height: 24px;
         font-weight: 400;
-        background: #F1F1F1;
+        background: var(--background-color-alt);
         font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #222; }
+        color: var(--font-color); }
     }
 
 /* Use this for a fixed background color instead of dark and light mode
@@ -112,21 +134,21 @@
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
-    color: #0085FF; 
+    color: var(--link-color);
     text-decoration: none;
   }
   a:hover {
-    color: #0085FF; }
+    color: var(--klee); }
   
   .spacing {
     padding: 0 10px;
   }
   
   @media (prefers-color-scheme: dark) {
-    .social-icon{color:#fff;}
+    .social-icon{color: var(--sand);}
     }
     @media (prefers-color-scheme: light) {
-      .social-icon{color:#222;}
+      .social-icon{color: var(--dunkelgrau);}
     }  
 
   /* Code
@@ -256,11 +278,11 @@
 /* Switches text color for credit footer for dark/light mode */
 @media (prefers-color-scheme: dark) {
   .credit-txt-clr{
-      color: #FFF !important;
+      color: var(--sand) !important;
   }
 }
 @media (prefers-color-scheme: light) {
   .credit-txt-clr{
-      color: #100a26 !important;
+      color: var(--tanne) !important;
   }
 }
